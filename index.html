@@ -6,46 +6,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    1. Difference between flex-direction as row and column.
+    1. Difference between flex-direction as row and column.   <br>
 
 This is a CSS property based on the concept of the flexbox. Flex-direction property
 can be applied to the parent elements and then the child elements of this parent tag
-will be placed accordingly.
+will be placed accordingly. <br>
 The difference is when we apply flex-direction : row, child elements will be placed
 one after another in the same row (horizontally) and then the row or x-axis will be
-considered as the main axis, in this case the y-axis will be known as cross axis.
-HTML:-
-<div class="container">
-<div class="flex-items"></div>
-<div class="flex-items"></div>
-<div class="flex-items"></div>
-</div>
+considered as the main axis, in this case the y-axis will be known as cross axis.<br>
 
+<pre>
 CSS:-
 .container{
 display: flex;
 flex-direction: row;
 }
-.flex-items{
+.flex-items
+{
 width: 100px;
 height: 100px;
 background-color: blueviolet;
-margin: 20px 20px; }
-
-Output:-
+margin: 20px 20px; 
+}
+OUTPUT:- Flex-direction-row
+</pre>
+<div class="container">
+    <div class="flex-items"></div>
+    <div class="flex-items"></div>
+    <div class="flex-items"></div>
+    </div>
+<br><br>
 On the other hand if we apply flex-direction : column places the child elements in
 column(vertically) means every child element will be placed one after another in
 the same column, and then the y-axis will be considered as the main axis and
 x-axis will be known as cross axis.
-HTML:-
-<div class="container1">
-<div class="flex-items1"></div>
-<div class="flex-items1"></div>
-<div class="flex-items1"></div>
-</div>
 
+
+<pre>
 CSS:-
 .container1{
 display: flex;
@@ -58,97 +58,63 @@ background-color: blueviolet;
 margin: 20px 20px;
 }
 
-Output:
 
-2. Explain the Inline, Internal, and External Stylesheet.
-In CSS, we have 3 different ways of writing styles for HTML elements:
-o Inline
-o Internal
-o External
+Output:- Flex-direction column
 
+</pre>
+<div class="container1">
+    <div class="flex-items1"></div>
+    <div class="flex-items1"></div>
+    <div class="flex-items1"></div>
+    </div>
+
+
+    <br><br>
+2. Explain the Inline, Internal, and External Stylesheet.<br>
+In CSS, we have 3 different ways of writing styles for HTML elements:<br>
+o Inline<br>
+o Internal<br>
+o External<br>
+<br>
 Inline styling gets applied directly to the element in the style attribute. This styling
 is having the highest priority among all. But it is not advised to use this styling
-much in projects.
-HTML:-
-<h1 style="color: red; text-align:center;">Heading One</h1>
-<p style="color: blue;">This is a paragraph</p>
-
-Output:-
-
+much in projects.<br>
+<br>
 Internal styling gets written in the head tag of the HTML file. It will be written in
 the style tag. The styling written in style tag will be applicable only in that HTML
 file.
-HTML:-
-<head>
-<style>
-h1 {
-color: maroon;
-margin-left: 40px;
-}
-p{
-color: maroon;
-}
-</style>
-</head>
-</head>
-<body>
-<h1>First Heading</h1>
-<p>This is a paragraph</p>
-</body>
-
+<br><br>
 External Styling is done by creating a different CSS file with .css extension. This
 file can be linked to any HTML file wherever the styling is required. The external
 CSS file can be attached to the HTML file in the head tag in the link tag. This
 styling is having the least priority but it is the most advised way of writing styling
-in projects.
-HTML:-
-<head>
-<title>Document</title>
-<link rel="stylesheet" href="mystyle.css">
-</head>
-<body>
-<h1>This is a heading</h1>
-<p>This is a paragraph.</p>
-</body>
+in projects.<br><br>
 
-CSS:- (file name : mystyle.css)
-h1 {
-color: blue;
-margin-top: 40px;
-}
-p{
-color: maroon;
-font-size: 30px;
-}
-Output:-
 
-3. What does justify-content allow you to do?
-The justify-content property is a sub-property of the Flex-box Module.
+3. What does justify-content allow you to do?<br>
+The justify-content property is a sub-property of the Flex-box Module.<br>
 The justify-content property specifies how flex-items are distributed along the
 main axis of their parent flex-container. If the flex-direction of the parent container
 is row(default value) then the main axis will be the x-axis. If the flex-direction is a
 column then the main axis will be the y-axis. This property has 6 different possible
-values:
-· flex-start (default)
-· flex-end
-· center
-· space-around
-· space-between
-· space-evenly
-· stretch
+values:<br>
+· flex-start (default)<br>
+· flex-end<br>
+· center<br>
+· space-around<br>
+· space-between<br>
+· space-evenly<br>
+· stretch<br><br>
 
-4. Difference between Absolute and Relative Positioning?
-position: relative
+4. Difference between Absolute and Relative Positioning?<br>
+position: relative<br>
 ● It is used when we need to position the HTML element relative to its normal
-position.
+position.<br>
 ● We can set top, right, bottom and left properties that will cause the element
-to adjust away from the normal position.
+to adjust away from the normal position.<br><br>
 
-HTML:-
-<div class="box" id="box1"></div>
-<div class="box" id="box2"></div>
-<div class="box" id="box3"></div>
-<div class="box" id="box4"></div>
+
+<pre>
 CSS:-
 .box {
 border: 2px solid red;
@@ -163,111 +129,120 @@ top: 34px;
 left: 34px;
 }
 
-
-position: absolute
-● An element with position absolute will move according to the position of its
-parent element.
-● In the absence of the parent element, the HTML element will be placed
-according to the body tag. In this case if you want to place the element at
-any position based on the parent element then we need to give the position :
-relative to parent element and then position : absolute to child element.
-
-HTML:-
+OUTPUT:- Position:relative
+</pre>
 <div class="box" id="box1"></div>
 <div class="box" id="box2"></div>
 <div class="box" id="box3"></div>
 <div class="box" id="box4"></div>
+<br><br>
+position: absolute<br>
+● An element with position absolute will move according to the position of its
+parent element.<br>
+● In the absence of the parent element, the HTML element will be placed
+according to the body tag. In this case if you want to place the element at
+any position based on the parent element then we need to give the position :
+relative to parent element and then position : absolute to child element.<br>
+
+
+<pre>
 CSS:-
-.box {
+.box1 {
 border: 2px solid red;
 display: inline-block;
 width: 150px;
 height: 150px;
 margin: 2px;
 }
-#box3 {
+#box33 {
 position: absolute;
-top: 34px;
+top: 2500px;
 left: 34px;
 }
 
-5. What are grid-template-columns used for?
+OUTPUT:- Position absolute
+</pre>
+<div class="box1" id="box11"></div>
+<div class="box1" id="box22"></div>
+<div class="box1" id="box33"></div>
+<div class="box1" id="box44"></div>
+<br><br>
+5. What are grid-template-columns used for?<br>
 Grid-template-columns property defines how many columns should be there in a
 grid-container. The number of columns is determined by the number of values
-defined in the space-separated list. It takes values in px, % and fraction (fr).
-HTML:-
-<div class="container">
-<div class="item">This is Item-1</div>
-<div class="item">This is Item-2</div>
-<div class="item">This is Item-3</div>
-<div class="item">This is Item-4</div>
-<div class="item">This is Item-5</div>
-<div class="item">This is Item-6</div>
-</div>
+defined in the space-separated list. It takes values in px, % and fraction (fr).<br>
+<pre>
 CSS:-
-.container{
+.container0{
 display: grid;
 grid-template-columns: 300px 100px 100px; //using pixels
 grid-gap: 2rem;
 }
-.item{
+.item0{
 background-color: red;
 border: 2px solid black;
 padding: 15px 5px;
 }
 
-Output:-
-
 CSS:-
-.container{
+.container0{
 display: grid;
 grid-template-columns: 300px auto 100px; //using value auto
 grid-gap: 2rem;
 }
-.item{
+.item0{
 background-color: red;
 border: 2px solid black;
 padding: 15px 5px;
 }
 
-Output:-
-
 CSS:-
-.container{
+.container0{
 display: grid;
 grid-template-columns: 1fr 3fr 1fr; //using fraction
 grid-gap: 2rem;
 }
-.item{
+.item0{
 background-color: red;
 border: 2px solid black;
 padding: 15px 5px;
 }
 CSS:-
-.container{
+.container0{
 display: grid;
 grid-template-columns: repeat(3, 25%); //using percentage and repeat
 grid-gap: 2rem;
 }
-.item{
+.item0{
 background-color: red;
 border: 2px solid black;
 padding: 15px 5px;
 }
 
-6. What is z-index in CSS?
+OUTPUT:-
+</pre>
+<div class="container0">
+    <div class="item0">This is Item-1</div>
+    <div class="item0">This is Item-2</div>
+    <div class="item0">This is Item-3</div>
+    <div class="item0">This is Item-4</div>
+    <div class="item0">This is Item-5</div>
+    <div class="item0">This is Item-6</div>
+    </div>
+    
+<br><br>
+6. What is z-index in CSS?<br>
 The z-index property determines the stack level of an HTML element. The “stack
 level” refers to the element’s position on the Z axis (as opposed to the X axis or Y
 axis). Elements with a higher index will be placed on top of elements with a lower
 index. If the z-index value of any element is positive then that element will be at
 the top and element having negative value of z-index will be at the bottom.
 Note :- z-index will only work on an element whose position property has been set
-to absolute, relative and fixed.
-HTML:-
-<div id="box1"></div>
-<div id="box2"></div>
+to absolute, relative and fixed.<br>
+
+<pre>
 CSS:-
-#box1 {
+#box01 {
 width: 100px;
 height: 100px;
 top: 69px;
@@ -275,50 +250,55 @@ position: relative;
 background-color: greenyellow;
 z-index: 1;
 }
-#box2 {
+#box02 {
 width: 150px;
 height: 150px;
 top: 34px;
 left: 20px;
 position: absolute;
-background-color: rebeccapurple;
+background-color: yellow;
 z-index: 0;
 }
-Output
+Output:-
+</pre>
+<div id="box01"></div>
+<div id="box02"></div>
 
-
-7. What is the difference between Padding and Margin.
+<br><br><br><br><br><br>
+7. What is the difference between Padding and Margin.<br>
 These two properties are CSS properties that provide space or gap. Both margin
-and padding targets the four sides of an element.
-
-Margin 
+and padding targets the four sides of an element.<br>
+<pre>
+         Margin                                            Padding
                                                 
-· Margin provides the space
-between the border and nearby
-elements. It is the space outside
-the border.
+· Margin provides the space                     · Padding values can only be
+  between the border and nearby                   positive.
+  elements. It is the space outside
+  the border.
 
-You can set margin values to be
-negative if you want elements to
-overlap.
+. You can set margin values to be               · Padding provides the space
+  negative if you want elements to                between the border and the
+  overlap.                                        content of an element. It is the
+                                                  space inside the border.
 
-· When you set margin values, the
-element's size does not change,
-only the space around it.
+                                                
+· When you set margin values, the              . When you set padding values
+  element's size does not change,                size of that element increases.
+  only the space around it.
+</pre>
 
 
-Padding
 
-· Padding values can only be
-positive.
 
-· Padding provides the space
-between the border and the
-content of an element. It is the
-space inside the border
 
-When you set padding values, the
-size of that element increases.
+
+
+
+
+
+
+
+
 
 </body>
 </html>
